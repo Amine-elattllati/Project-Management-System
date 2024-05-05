@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.Date;
 
 public class JwtProvider {
-      static SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_Key.getBytes());
+    static SecretKey key = Keys.hmacShaKeyFor(JwtConstant.SECRET_Key.getBytes());
 
     public static String generateToken(Authentication auth){
         return Jwts.builder().setIssuedAt(new Date())
